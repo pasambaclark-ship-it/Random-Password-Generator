@@ -2,6 +2,13 @@
 #include<stdlib.h>
 #include<time.h>
 
+void seperator(int length) {
+    for(int i = 0; i<=length; i++){
+        printf("=");
+    }
+    printf("\n");
+}
+
 void gen_password(char *password, int length){
     const char uppercase[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const char lowercase[]="abcdefghijklmnopqrstuvwxyz";
@@ -37,6 +44,7 @@ int main () {
     srand((unsigned int)time(NULL));
 
 do{
+    seperator(50);
     printf("\t\tSIGN UP\n\n");
     printf("SYSTEM GENERATED PASSWORD? ");
     scanf(" %c", &choice);
@@ -50,6 +58,7 @@ do{
         printf("PASSWORD: %s", password);
       
         printf("\n");
+        seperator(50);
     } else {
         printf("Can not Generate a Password, Please try again.");
     }
